@@ -10,6 +10,6 @@ double price = Convert.ToDouble(Console.ReadLine());
 Console.Write($"Tip (%): ");
 double tip = Convert.ToDouble(Console.ReadLine())/100;
 
-Console.WriteLine($"\nBill: {price.ToString("C",CultureInfo.CurrentCulture)}");
-Console.WriteLine($"Tip ({tip:P}): {(price*tip).ToString("C",CultureInfo.CurrentCulture)}");
-Console.WriteLine($"Total: {(price+price*tip).ToString("C",CultureInfo.CurrentCulture)}");
+Console.WriteLine($"\nBill: {price.ToString("C",CultureInfo.GetCultureInfo("en-us"))}");
+Console.WriteLine($"Tip ({tip:P}): {(price*tip).ToString("C",CultureInfo.GetCultureInfo("en-us"))}");
+Console.WriteLine($"Total: {(price+price*tip).ToString("C",CultureInfo.GetCultureInfo("en-us"))}");
